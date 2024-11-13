@@ -3,17 +3,27 @@ body{
     max-width: 75rem;
     margin: auto;
     height: 100vh;
+
+   
+        
 }
 
 header{
     background-image:url(SharingFood.jpg);
     background-repeat: repeat;
     background-size: contain;
-    background-position: center;
+    background-position: right;
     height:200px;
     width: 100%;
     margin: auto;
 }
+/*  This code below adds a black box for my login/ register icons  */
+nav {
+    background-color:  black;
+    padding: 10px;
+    text-align: left;
+}
+
 
 /**** Menu Style *****************************************/
 nav {
@@ -30,14 +40,14 @@ ul.navlist{
 
 ul.navlist li
 {
-    float: left;
+    float: right;
     display: inline;
 }
 
 ul.navlist li a {
     display: block;
     color: white;
-    text-align: center;
+    text-align: left;
     padding: 14px 16px;
     text-decoration: none;
 }
@@ -59,8 +69,9 @@ main {
 section, aside {
     padding: 0.5rem;
     box-sizing: border-box;
-    min-height: 100%;
+    min-height: 50%;
 }
+
 
 aside {
     /*ToDo: Set width.ToDo: For fluid layouts, use min-width, max-width, and set to relative 
@@ -80,23 +91,22 @@ section {
     text-align: left;
 }
 
-.center {
-    /*ToDo: Styling for centered elements
-    You can use margin, width useful to center.
-    */
+.center{
+    
     border: 3px solid green;
-    padding: 10px;
+    padding: 20x;
+    
   }
 
 /* Styling for text inputs in the form*/
 .textInput {
     display: block;
-    width: auto;
+    width: 50cm;
     text-align: left;
 }
 
 /*Styling with a media query - lecture slide 36*/
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 500x) {
     /* ToDo: Style aside and section so that they take 100% width on small screens*/
     aside {
     
