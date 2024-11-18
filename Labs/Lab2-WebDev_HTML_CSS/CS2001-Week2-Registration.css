@@ -3,27 +3,17 @@ body{
     max-width: 75rem;
     margin: auto;
     height: 100vh;
-
-   
-        
 }
 
 header{
     background-image:url(SharingFood.jpg);
     background-repeat: repeat;
     background-size: contain;
-    background-position: right;
+    background-position: center;
     height:200px;
     width: 100%;
     margin: auto;
 }
-/*  This code below adds a black box for my login/ register icons  */
-nav {
-    background-color:  black;
-    padding: 10px;
-    text-align: left;
-}
-
 
 /**** Menu Style *****************************************/
 nav {
@@ -40,14 +30,14 @@ ul.navlist{
 
 ul.navlist li
 {
-    float: right;
+    float: left;
     display: inline;
 }
 
 ul.navlist li a {
     display: block;
     color: white;
-    text-align: left;
+    text-align: center;
     padding: 14px 16px;
     text-decoration: none;
 }
@@ -59,29 +49,31 @@ ul.navlist li a:hover {
 /**** Styling for main part */
 
 main {
-    border-bottom: 0.5rem solid;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
     box-sizing: border-box;
-    /*ToDo: Make this a flexible container; 
-    You can find the following helpful: display, flex-wrap, width, min-height, height
-    See lecture slides*/
+    border-bottom: 0.5rem solid;
+    width: 100%;
+    min-height: 100%;
+    height: auto;
 }
 
 section, aside {
     padding: 0.5rem;
     box-sizing: border-box;
-    min-height: 50%;
+    min-height: 100%;
 }
 
-
 aside {
-    /*ToDo: Set width.ToDo: For fluid layouts, use min-width, max-width, and set to relative 
-   values, like 25% of the page.*/ 
+    width: 25%;
+    min-width: 180px;
     background-color: #deded8;
 }
 
 section {
-    /*ToDo: Set width. For fluid layouts, use min-width, max-width, and set to relative 
-   values, like 75% of the page.*/
+    min-width: 350px;
+    width: 75%;
 }
 
 /*Styling for search in aside*/
@@ -91,33 +83,31 @@ section {
     text-align: left;
 }
 
-.center{
-    
+.center {
+    margin: auto;
+    width: 50%;
     border: 3px solid green;
-    padding: 20x;
-    
+    padding: 10px;
   }
 
 /* Styling for text inputs in the form*/
 .textInput {
     display: block;
-    width: 50cm;
+    width: auto;
     text-align: left;
 }
 
-/*Styling with a media query - lecture slide 36*/
-@media screen and (max-width: 500x) {
-    /* ToDo: Style aside and section so that they take 100% width on small screens*/
-    aside {
-    
+/*Styling with a media query*/
+@media screen and (max-width: 700px) {
+    main{
+        flex-direction: column;
     }
     
-    section {
- 
+    aside {
+        min-width: 100%;
     }
 
     #hiddenSection{
         overflow-wrap: break-word;
     }
-
 }
